@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+</head>
+<body>
+    <h1>Item List</h1>
+    {% if items %}
+        <ul>
+            {% for item in items %}
+                <li> {{ item.name }} </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Results Found. Please add items in the admin panel</p>
+    {% endif %}
+</body>
+</html>
